@@ -26,7 +26,7 @@ npm.cmd run test:e2e:ui
 npm.cmd run test:e2e:report
 ```
 
-Os testes que verificam os defeitos **devem falhar na versão inicial**. Esse é o ponto de partida do exercício, não um resultado aprovado. Um teste smoke e um unitário simples devem passar. Os testes E2E sobem a app automaticamente em uma porta separada (`4173`); não é necessário manter `npm run dev` para eles.
+Os testes que verificam os defeitos foram criados para **falhar quando o bug correspondente está presente**. Depois da correção, o teste deve passar. O estado atual da `main` já inclui a correção do BUG-001 (veja o case study); os demais cenários permanecem para investigação. Um teste smoke e um unitário simples foram concebidos para passar. Os testes E2E sobem a app automaticamente em uma porta separada (`4173`); não é necessário manter `npm run dev` para eles.
 
 ## Casos de teste / bugs simulados
 
@@ -35,6 +35,8 @@ Os testes que verificam os defeitos **devem falhar na versão inicial**. Esse é
 | BUG-001 | Total = preço × quantidade de cada item | [BUG-001](docs/BUG-001.md) |
 | BUG-002 | E-mail malformado não pode confirmar pedido | [BUG-002](docs/BUG-002.md) |
 | BUG-003 | Dois cliques não podem criar dois pedidos | [BUG-003](docs/BUG-003.md) |
+
+**Registro de progresso:** o BUG-001 foi investigado e corrigido localmente antes da publicação inicial do repositório. A [documentação do caso](docs/BUG-001.md) registra a falha, a causa raiz, o reteste e as evidências ainda pendentes de anexar. Esta PR de documentação não recria artificialmente um diff da correção.
 
 [Plano de testes](docs/TEST_PLAN.md) · [Modelo de case study](docs/CASE_STUDY_TEMPLATE.md) · [Roteiro de vídeo](docs/VIDEO_SCRIPT.md)
 
