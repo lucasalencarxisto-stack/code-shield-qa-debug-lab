@@ -12,18 +12,18 @@ React + TypeScript + Vite · Vitest (unidade) · Playwright (E2E/trace/screensho
 **Pré-requisito:** Node.js 22.12+ e npm. Confira `node -v`. Evite Node 16 antigo deste projeto de faculdade.
 
 ```bash
-npm install
-npx playwright install chromium
-npm run dev
+npm.cmd install
+npx.cmd playwright install chromium
+npm.cmd run dev
 ```
 
 Abra o endereço local indicado pelo Vite (geralmente `http://localhost:5173`). Para rodar os testes, use outro terminal:
 
 ```bash
-npm run test:unit
-npm run test:e2e
-npm run test:e2e:ui
-npm run test:e2e:report
+npm.cmd run test:unit
+npm.cmd run test:e2e
+npm.cmd run test:e2e:ui
+npm.cmd run test:e2e:report
 ```
 
 Os testes que verificam os defeitos foram criados para **falhar quando o bug correspondente está presente**. Depois da correção, o teste deve passar. O estado atual da `main` já inclui a correção do BUG-001 (veja o case study); os demais cenários permanecem para investigação. Um teste smoke e um unitário simples foram concebidos para passar. Os testes E2E sobem a app automaticamente em uma porta separada (`4173`); não é necessário manter `npm run dev` para eles.
